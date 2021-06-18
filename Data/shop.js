@@ -37,7 +37,7 @@ var itemList = [
                             price: 10,
                             category: "Computers",
                             src: "images/Flipping Industries Products/broke gamer_Trans.png",
-                            description: " Get a job Pu$$sy ",
+                            description: " Get a job ",
                         }
     ]
 
