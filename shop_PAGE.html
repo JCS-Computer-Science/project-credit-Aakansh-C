@@ -25,30 +25,15 @@
 
         <div id='Shop'>
             <transition-group appear name='drop'>
-            <div id="product0" class="product_Card" key='d'>
-                <img class="product_IMG" src="https://nzxt.com/assets/cms/34299/1616124321-streamingpcwhttomohawkmobohero.png?ar=1%3A1&auto=format&bg=F5F5F8&fit=crop&fm=webp&h=400&w=400">
-                <p>{{ product0 }}</p>
+            <div class="product_Card" v-for="product in products" :key='product.id'>
+                <img src="images/purple cart.png" id="purchase_Button" @click= "add_Product(product)"></img>
+                <img class="product_IMG" :src="product.src" >
+                <p class='product_Name'>{{ product.name }}</p>
+                <p class='product_Price'> ${{ product.price }}</p>
+                <p>{{ product.category }}</p>
+                <p>{{ product.description }}</p>
             </div>
             
-            <div id="product1" class="product_Card" key='d'>
-                <img class="product_IMG" src="https://nzxt.com/assets/cms/34299/1616124321-streamingpcwhttomohawkmobohero.png?ar=1%3A1&auto=format&bg=F5F5F8&fit=crop&fm=webp&h=400&w=400">
-                <p>{{ product1 }}</p>
-            </div> 
-
-            <div id="product2" class="product_Card" key='d'>
-                <img class="product_IMG" src="https://nzxt.com/assets/cms/34299/1616124321-streamingpcwhttomohawkmobohero.png?ar=1%3A1&auto=format&bg=F5F5F8&fit=crop&fm=webp&h=400&w=400">
-                <p>{{ product2 }}</p>
-            </div>  
-
-            <div id="product3" class="product_Card" key='d'>
-                <img class="product_IMG" src="https://nzxt.com/assets/cms/34299/1616124321-streamingpcwhttomohawkmobohero.png?ar=1%3A1&auto=format&bg=F5F5F8&fit=crop&fm=webp&h=400&w=400">
-                <p>{{ product3 }}</p>
-            </div>  
-
-            <div id="product4" class="product_Card" key='d'>
-                <img class="product_IMG" src="https://nzxt.com/assets/cms/34299/1616124321-streamingpcwhttomohawkmobohero.png?ar=1%3A1&auto=format&bg=F5F5F8&fit=crop&fm=webp&h=400&w=400">
-                <p>{{ product4 }}</p>
-            </div>  
         </transition-group>
         
         </div>
@@ -58,7 +43,7 @@
 </head>
 
 <body>
-    <script src="Data/products.js">
+    <script src="Data/shop.js">
 
 
     </script>

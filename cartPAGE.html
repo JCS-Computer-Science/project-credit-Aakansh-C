@@ -6,11 +6,12 @@
     <link rel="icon" href="images/Flipping_Icon.png" >
     <link rel="stylesheet" href="\CSS\cart.css">
     <link rel="stylesheet" href="\CSS\home.css">
+    <link rel="stylesheet" href="\CSS\shop.css">
 
 
 
 
-<div id="app">
+<div id="app_Cart">
     <div id='container'>
         <div id="title" class="Title">
             
@@ -22,22 +23,24 @@
             
            <a href="contactPAGE.HTML"> <h2 id="contact" class="colourG" title="Email or Contact us if you have any questions OR even to work on building you something unique"> CONTACT </h2> </a>
         </div>
+
+        <div id='cart'>
+                <transition-group appear name='drop'>
+                <div class="product_Card" v-for="(product,index) in Cart" :key='index'>
+                    <img class="product_IMG" :src="product.src" >
+                    <p class='product_Name'>{{ product.name }}</p>
+                    <p class='product_Price'> ${{ product.price }}</p>
+                    <p>{{ product.category }}</p>
+                    <p>{{ product.description }}</p>
+                </div>
+                </transition-group>
+        </div>
     </div>
 </div>
 
 </head>
 
 <body>
-    <script>
-
-         var VM = new Vue ({
-                el: '#app',
-                data: {
-
-                },
-                methods: {
-                }
-            })
-    </script>
+    <script src="Data/cart.js"></script>
 
 </body>
