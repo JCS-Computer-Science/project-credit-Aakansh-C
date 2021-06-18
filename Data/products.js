@@ -29,7 +29,7 @@ var itemList = [
                             id: 4,
                             name: " The Broke",
                             category: "Computers",
-                            description: " Get a job Pu$$sy",
+                            description: " Get a job",
                         }
     ]
 
